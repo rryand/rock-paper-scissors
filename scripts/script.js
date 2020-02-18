@@ -80,12 +80,7 @@ function game(playerSelection) {
     let newResultText = document.getElementById('result');
     let newGameScore = document.getElementById('game-score');
     newResultText.textContent = '> ' + result;
-    if (playerScore < 5 || computerScore < 5) newGameScore.textContent = `Player: ${playerScore} | PC: ${computerScore}`;
-
-    console.log(result);
-    console.log(`Player:    ${playerScore}`);
-    console.log(`Computer:  ${computerScore}`);
-    
+    newGameScore.textContent = `Player: ${playerScore} | PC: ${computerScore}`;
     if (playerScore === 5 || computerScore === 5) {
         let finalResult = (playerScore > computerScore) ? 'Congrats! You win!' : 
         'You lose. Better luck next time!';
